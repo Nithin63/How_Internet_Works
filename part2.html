@@ -111,6 +111,66 @@
             environment.
 
             <h1 class="mt-3">PACKETS AND ROUTING</h1>
+            IP Packets, Routers and Routing
+            Previously, we looked at a simplified IP packet, with fields for the source and destination addresses as
+            well as the data it transports. In a real IP packet header there are several other fields.
+
+            Structure of an IP header, containing the fields described above and below as well as 'Version', 'Total
+            length', 'Protocol', 'Header checksum', 'Options (+padding)' and 'Data variable'.
+
+            IHL indicates the header length.
+            Packets use Type of Service to request special treatment (e.g. being put at the front of any queues).
+            The identification, flags, and fragmentation offset fields keep track of each fragment when an IP packet is
+            split up into smaller packets.
+            The time to live is set when the IP packet is sent off, and the number is reduced by 1 each time the packet
+            goes through a router. When the time to live gets to 0, the packet is deleted. This stops packets from
+            circulating in a loop.
+            You can find all the details about the header of IPv4 packets as well as the header of IPv6 packets on
+            Wikipedia.
+
+            Routers and routing
+            Routers got their name because they route IP Packets across networks: a router device connects different
+            links. It examines IP packet headers, looking at the destination address and consulting a routing table of
+            known networks. The table indicates which connections to send the packet on as the next link. The
+            connections on a router are called interfaces: through the router, they interface between different link
+            types.
+
+            An IP packet enters a circle labelled as a router. An arrow links its destination address to a routing
+            table, with two columns, "NET" and "INT". The IP packet is shown leaving the router along a path to device
+            A, a tablet. The router is also connected to devices B, C and D, a printer, a desktop, and a laptop
+            respectively.
+
+            In the animation, an IP packet arrives at a router, which compares the packet’s destination address with the
+            networks in the routing table. The packet is identified as belonging to network A, so the router routes it
+            out of interface 1.
+
+            Often, routers learn how to reach distant networks by exchanging information with their neighbouring routers
+            and building their own routing tables. This exchange of information to learn about other networks is called
+            a routing protocol. You can find more information about routing protocols on Wikipedia.
+
+            Note: the term ‘routing protocol’ can be easily confused with routed protocol. IP is a routed protocol:
+            routers examine IP packets and route them out of an interface based on the destination IP address.
+
+            Routing on Home and Small Business Networks
+            A home or small-business network usually has a single LAN, which a router connects to an ISP.
+
+            Several different devices with different IP addresses in the 192.168.1.X network are connected to a switch,
+            by wired or wireless connections. The switch is inside a circle labelled "Home hub/gateway/router", which
+            also contains a smaller circle labelled "Router" and a box labelled "Modem" . A line labelled LAN with the
+            IP network address 192.168.1.0 connects the switch and router, and a line labelled WAN with the IP address
+            82.5.6.11 connects the router and the modem. The modem is connected to an ISP (outside the home hub circle),
+            and the ISP is connected to the internet. Below the home hub circle is a table, with columns "Net" and
+            "Int". The first entry is "192.168.1.0" in the Net column and "LAN" in the Int column. The other two entries
+            both have "WAN" is the Int column. In the Net column they are the IP addresses "82.0.0.0" and "0.0.0.0".
+
+            Each of the network’s devices, including the actual interface on the router for the LAN, will have a
+            192.168.1.X address. The internal LAN’s network address is therefore 192.168.1.0.
+
+            The Router’s WAN interface has the address 82.5.6.11, which is part of the ISP’s 82.0.0.0 network.
+
+            So the router is connected to two different IP networks, which are automatically placed into the routing
+            table. The default network, 0.0.0.0, gets configured so it sends data out via the WAN interface and onto the
+            next router.
 
         </div>
 
