@@ -27,8 +27,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="introduction.html">Home
+                    <a class="nav-link" href="introduction.html">Topics
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -44,19 +47,21 @@
 </nav>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
+    <div class="row" >
+        <div class="col-lg-12 text-center" >
+
             <h1 class="mt-3">DNS</h1>
-            <p>
-                DOMAIN NAME SERVER?</p>
-            <p style="text-align:right">
+
+            <p style="text-align:left">
+                DOMAIN NAME SERVER?
+            <p  style="text-align:left">
                 All computers on the Internet, from your smart phone or laptop to the servers that serve content for
                 massive
                 retail websites, find and communicate with one another by using numbers. These numbers are known as IP
                 addresses. When you open a web browser and go to a website, you don't have to remember and enter a long
                 number. Instead, you can enter a domain name like example.com and still end up in the right place.
             </p>
-            <p>
+            <p style="text-align:left">
                 A DNS service such as Amazon Route 53 is a globally distributed service that translates human readable
                 names
                 like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each
@@ -66,7 +71,7 @@
                 will reach when they type a domain name into their web browser. These requests are called queries.
 
             </p>
-            <p>
+            <p style="text-align:left">
                 Types of DNS Service
                 Authoritative DNS: An authoritative DNS service provides an update mechanism that developers use to
                 manage
@@ -77,7 +82,7 @@
                 for providing answers to recursive DNS servers with the IP address information. Amazon Route 53 is an
                 authoritative DNS system.
             </p>
-            <p>
+            <p style="text-align:left">
                 Recursive DNS: Clients typically do not make queries directly to authoritative DNS services. Instead,
                 they
                 generally connect to another type of DNS service known a resolver, or a recursive DNS service. A
@@ -90,7 +95,7 @@
                 it
                 passes the query to one or more authoritative DNS servers to find the information.
             </p>
-            <p>
+            <p style="text-align:left">
                 Get Started with AWS for Free
                 Create a Free Account
                 Or Sign In to the Console
@@ -98,38 +103,38 @@
                 24x7x365 customer service, support forums, and more.
                 Please note that Amazon Route 53 is not currently available on the AWS Free Tier.
             </p>
-            <p>
+            <p style="text-align:left">
                 How Does DNS Route Traffic To Your Web Application?
                 The following diagram gives an overview of how recursive and authoritative DNS services work together to
                 route an end user to your website or application.
                 how-route-53-routes-traffic
             </p>
-            <p>
+            <p style="text-align:left">
                 A user opens a web browser, enters www.example.com in the address bar, and presses Enter.
-            <p>
+            <p style="text-align:left">
                 The request for www.example.com is routed to a DNS resolver, which is typically managed by the user's
                 Internet service provider (ISP), such as a cable Internet provider, a DSL broadband provider, or a
                 corporate
                 network.</p>
-            <p>
+            <p style="text-align:left">
             </p>
-            <p> The DNS resolver for the ISP forwards the request for www.example.com to a DNS root name server.
+            <p style="text-align:left"> The DNS resolver for the ISP forwards the request for www.example.com to a DNS root name server.
             </p>
-            <p> The DNS resolver for the ISP forwards the request for www.example.com again, this time to one of the TLD
+            <p style="text-align:left"> The DNS resolver for the ISP forwards the request for www.example.com again, this time to one of the TLD
                 name servers for .com domains. The name server for .com domains responds to the request with the names
                 of
                 the four Amazon Route 53 name servers that are associated with the example.com domain.
             </p>
-            <p> The DNS resolver for the ISP chooses an Amazon Route 53 name server and forwards the request for
+            <p style="text-align:left"> The DNS resolver for the ISP chooses an Amazon Route 53 name server and forwards the request for
                 www.example.com to that name server.
             </p>
-            <p> The Amazon Route 53 name server looks in the example.com hosted zone for the www.example.com record,
+            <p style="text-align:left"> The Amazon Route 53 name server looks in the example.com hosted zone for the www.example.com record,
                 gets
                 the associated value, such as the IP address for a web server, 192.0.2.44, and returns the IP address to
                 the
                 DNS resolver.
             </p>
-            <p> The DNS resolver for the ISP finally has the IP address that the user needs. The resolver returns that
+            <p style="text-align:left"> The DNS resolver for the ISP finally has the IP address that the user needs. The resolver returns that
                 value
                 to the web browser. The DNS resolver also caches (stores) the IP address for example.com for an amount
                 of
@@ -137,15 +142,15 @@
                 For
                 more information, see time to live (TTL).
             </p>
-            <p> The web browser sends a request for www.example.com to the IP address that it got from the DNS resolver.
+            <p style="text-align:left"> The web browser sends a request for www.example.com to the IP address that it got from the DNS resolver.
                 This is where your content is, for example, a web server running on an Amazon EC2 instance or an Amazon
                 S3
                 bucket that's configured as a website endpoint.
             </p>
-            <p> The web server or other resource at 192.0.2.44 returns the web page for www.example.com to the web
+            <p style="text-align:left"> The web server or other resource at 192.0.2.44 returns the web page for www.example.com to the web
                 browser,
                 and the web browser displays the page.
-            </p>
+            </p></p>
         </div>
 
         <!--  <ul class="list-unstyled">
