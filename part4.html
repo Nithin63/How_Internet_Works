@@ -1,10 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WEB SYSTEMS CS601</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../How_Internet_Works/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">HOW INTERNET WORKS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="introduction.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p class="mt-3">IP Address , Packets and Routing</p>
+            <h1 class="mt-3">IP ADDRESS</h1>
+
+            Do you know that 68% of internet users believe that current laws for protecting their rights are not good
+            enough?
+
+            Every time Google introduces a new preference, the internet takes/ is forced to note. Something similar
+            happened when Google announced that websites with SSL Certificate / HTTPS protocol will be preferred in
+            search engine results. I will try to cover the fundamentals of HTTP and HTTPS protocols
+
+            Before we dive deeper into understanding about HTTP and HTTPS protocol, let’s try to understand the meaning
+            of the word protocol.https and http protocol
+
+            What is a protocol?
+            A Protocol is a set of rules that we use for specific purposes. In the current scenario, when we are talking
+            about protocols, it is about communication- the way we talk to each other. For instance, a newsreader speaks
+            in English and because you understand English, you are able to understand. English is the protocol.
+
+            The moment the newsreader starts speaking in a language that you don't understand, the protocol beats its
+            purpose. Thus, we need both the parties to agree to a set of rules for the communication to take place. The
+            protocol, in this case, is for communication.
+
+            Now, talking about the web, in particular, multiple protocols are used to communicate. Primarily for end
+            users, the most important and visible protocols are HTTP and HTTPS. Though there are many other protocols as
+            well, HTTP and HTTPS protocols cater to most of the population.
+
+            What is HTTP?
+            HTTP is Hypertext transfer protocol. Simply put - Rules to sending and receiving text-based messages. As we
+            all know, computers work in a language of 1's and 0's i.e. Binary language. Therefore, potentially every set
+            of 1's and 0's construct something, it could be a word.
+
+            Let's say I want to write 'a'. Now, if 0 stands for 'a', 1 stands for 'b', and 01 stands for 'c', I can
+            infer that a combination of 0's and 1's can construct a word as well. In this case, the text is already
+            constructed and is being sent on the wire. The computer works on many languages - pure binary, text and some
+            other formats like byte codes. Here, what is being transferred is text. I am emphasizing on 'text' because
+            this text is interpreted by the browser and the moment browser interprets it, it becomes hypertext, and the
+            protocol that transfers the text is referred to as hypertext transfer protocol - HTTP.
+
+            Using HTTP, you can definitely transfer images and text and even sound, but not videos.
+
+            What is HTTPS?
+            Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the protocol over which data is
+            sent between your browser and the website that you are connected to. The 'S' at the end of HTTPS stands for
+            'Secure'. It means all communications between your browser and the website are encrypted. HTTPS is often
+            used to protect highly confidential online transactions like online banking and online shopping order forms.
+
+            Download the ultimate push notification marketing kit for free
+            What is the importance of HTTPS?
+            We agreed upon the fact that what is being transferred from one point to another is text. To understand why
+            HTTPS protocol, we first should know how wi-fi routers function.Let's say you are at an airport and you are
+            connecting to the wi-fi which is the property of a third party. Now, when you are communicating over HTTP,
+            the text is being transferred by their router. And if I go to a low version of the router, I can comfortably
+            check and read the text that is being transferred. There could be a password that I can use to login to your
+            bank site and do a fraudulent transaction!. Point being - this is fundamentally insecure. This is called the
+            man in the middle attack.
+
+            And this why do we need https when HTTP seems to suffice.
+
+            Now, to save our data from such attacks, we need to encrypt that data.
+        </div>
+
+        <!--  <ul class="list-unstyled">
+            <li>Bootstrap 4.5.0</li>
+            <li>jQuery 3.5.1</li>
+          </ul> -->
+    </div>
+</div>
+</div>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../How_Internet_Works/vendor/jquery/jquery.slim.min.js"></script>
+<script src="../How_Internet_Works/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
